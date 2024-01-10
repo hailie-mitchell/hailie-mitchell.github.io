@@ -5,22 +5,65 @@
     <style>
         /* Basic CSS styles for a minimalist and light design */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Lucida Console", monospace;
             background-color: white;
             color: #2E4E1F; /* Forest Green */
             margin: 0;
-            padding: 0;
+            padding-top: 40px;
         }
-        /* ... additional CSS styles ... */
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .headshot {
+            width: 20%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .icon {
+            width: 30px;
+            height: auto;
+            margin: 0 10px;
+        }
+        .center {
+            text-align: center;
+        }
+        .section {
+            margin-top: 60px;
+            margin-bottom: 60px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        footer {
+            background-color: #2E4E1F; /* Forest Green */
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        footer a {
+            color: white;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Hailie Mitchell</h1>
+        <h1 class="center">Hailie Mitchell</h1>
         <img src="pictures/headshot.jpg" alt="Your Headshot" class="headshot">
         <!-- Navigation Links -->
-        <nav>
-            <a href="#about">About Me</a>
+        <nav class="center">
+            <a href="#about">About</a>
+            <a href="documents/resume.pdf" target="_blank">CV</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -28,16 +71,18 @@
 
     <!-- About Me Section -->
     <div class="container">
-        <section id="about" class="about">
+        <section id="about" class="section">
             <h2>About Me</h2>
-            <p>I am currently a fourth-year undergrad at Dickinson College in Carlisle, PA, graduating May 2024 with a Bachelor of Science in Computer Science and a minor in Mathematics.
-                I'm originally from Seattle, WA. Right now, I am in the process of applying to PhD programs in computer science and software engineering to further my research in 
-                software quality. 
+            <p>I am currently a fourth-year undergrad at <a href="https://www.dickinson.edu/" target="_blank">Dickinson College</a> in Carlisle, PA, though I'm originally from just 
+                outside Seattle, WA. I'll be graduating in May 2024 with a Bachelor of Science in Computer Science and a minor in Mathematics. Right now, I am in the process of applying 
+                to PhD programs in computer science and software engineering to further my research in software quality. 
             </p>
+            <p>At Dickinson, I am a Computer Science help room tutor, and I'm also currently captain of 
+                the <a href="https://www.instagram.com/dickinsonequestrian/?hl=en" target="_blank">Dickinson Equestrian Team!</a></p>
         </section>
 
         <!-- Projects and Publications Section -->
-        <section id="projects" class="projects">
+        <section id="projects" class="section">
             <h2>Projects and Publications</h2>
             <div>
                 <h3>Efficient Bug Finding in Robotic Deep Learning: Adversarial Rendering for GQCNNs</h3>
@@ -51,28 +96,39 @@
             <div>
                 <h3>MELT: Mining Effective Lightweight Transformations from Pull Requests</h3>
                 <p>I started working on this as an REU project at REUSE at CMU in 2022 advised by Professor Claire Le Goues, and continued working on the project until publication.</p>
-                <p><strong>Abstract:</strong>Software developers often struggle to update APIs, leading to manual, time-consuming, and error-prone processes. We introduce Melt, 
+                <p><strong>Abstract:</strong>"Software developers often struggle to update APIs, leading to manual, time-consuming, and error-prone processes. We introduce Melt, 
                     a new approach that generates lightweight API migration rules directly from pull requests in popular library repositories. Our key insight is that pull requests 
                     merged into open-source libraries are a rich source of information sufficient to mine API migration rules. By leveraging code examples mined from the library 
                     source and automatically generated code examples based on the pull requests, we infer transformation rules in Comby, a language for structural code search and 
                     replace. Since inferred rules from single code examples may be too specific, we propose a generalization procedure to make the rules more applicable to client 
                     projects. Melt rules are syntax-driven, interpretable, and easily adaptable. Moreover, unlike previous work, our approach enables rule inference to seamlessly 
-                    integrate into the library workflow, removing the need to wait for client code migrations. We evaluated Melt on pull requests from four popular libraries, 
+                    integrate into the library workflow, removing the need to wait for client code migrations..." </p>
+                    <!-- We evaluated Melt on pull requests from four popular libraries, 
                     successfully mining 461 migration rules from code examples in pull requests and 114 rules from auto-generated code examples. Our generalization procedure 
                     increases the number of matches for mined rules by 9×. We applied these rules to client projects and ran their tests, which led to an overall decrease in the 
-                    number of warnings and fixing some test cases demonstrating MELT's effectiveness in real-world scenarios.</p>
+                    number of warnings and fixing some test cases demonstrating MELT's effectiveness in real-world scenarios. -->
                 <p><a href="https://doi.ieeecomputersociety.org/10.1109/ASE56229.2023.00117" target="_blank">Read the paper!</a></p>
             </div>
-           
+
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <a href="mailto:mitchelh@dickinson.edu"><img src="pictures/2674096_object_email_web_essential_icon.svg.png" alt="Email" class="icon">Email</a>
-            <a href="https://www.linkedin.com/in/hailie-mitchell" target="_blank"><img src="pictures/Linkedin_(CoreUI_Icons_v1.0.0).svg.png" alt="LinkedIn" class="icon">LinkedIn</a>
-            <a href="https://github.com/hailie-mitchell" target="_blank"><img src="pictures/Github-circle_(CoreUI_Icons_v1.0.0).svg.png" alt="GitHub" class="icon">GitHub</a>
-        </section>
+        <div class="section">
+            <h2 class="center">Contact Me!</h2>
+            <section id="contact" class="contact">
+                <a href="mailto:mitchelh@dickinson.edu"><img src="pictures/2674096_object_email_web_essential_icon.svg.png" alt="Email" class="icon"></a>
+                <a href="https://www.linkedin.com/in/hailie-mitchell" target="_blank"><img src="pictures/Linkedin_(CoreUI_Icons_v1.0.0).svg.png" alt="LinkedIn" class="icon"></a>
+                <a href="https://github.com/hailie-mitchell" target="_blank"><img src="pictures/Github-circle_(CoreUI_Icons_v1.0.0).svg.png" alt="GitHub" class="icon"></a>
+            </section>
+        </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="attribution">"<a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=130878983">2674096 object email web essential icon</a>" by <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?title=User:UTGPT&action=edit&redlink=1">UTGPT</a> is licensed under <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>. </p>
+        <p class="attribution">"<a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=85712984">Linkedin (CoreUI Icons v1.0.0)</a>" by <a target="_blank" rel="noopener noreferrer" href="https://coreui.io">CoreUI</a> is licensed under <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/4.0/?ref=openverse">CC BY 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>. </p>
+        <p class="attribution">"<a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=85712356">Github-circle (CoreUI Icons v1.0.0)</a>" by <a target="_blank" rel="noopener noreferrer" href="https://coreui.io">CoreUI</a> is licensed under <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/4.0/?ref=openverse">CC BY 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>. </p>
+    </footer>
+
 </body>
 </html>
