@@ -1,1 +1,78 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hailie Mitchell</title>
+    <style>
+        /* Basic CSS styles for a minimalist and light design */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #2E4E1F; /* Forest Green */
+            margin: 0;
+            padding: 0;
+        }
+        /* ... additional CSS styles ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hailie Mitchell</h1>
+        <img src="pictures/headshot.jpg" alt="Your Headshot" class="headshot">
+        <!-- Navigation Links -->
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am currently a fourth-year undergrad at Dickinson College in Carlisle, PA, graduating May 2024 with a Bachelor of Science in Computer Science and a minor in Mathematics.
+                I'm originally from Seattle, WA. Right now, I am in the process of applying to PhD programs in computer science and software engineering to further my research in 
+                software quality. 
+            </p>
+        </section>
+
+        <!-- Projects and Publications Section -->
+        <section id="projects" class="projects">
+            <h2>Projects and Publications</h2>
+            <div>
+                <h3>Efficient Bug Finding in Robotic Deep Learning: Adversarial Rendering for GQCNNs</h3>
+                <p><strong>Ongoing Project!</strong></p>
+                <p>I am currently working on my Honor's Thesis at Dickinson College, advised by Professor John MacCormick from Dickinson College and Professor
+                    Claire Le Goues from CMU. The project is an extension of an REU project from CMU's REUSE during 2023. We are combining the strategies of differentiable rendering 
+                    and adverarial attacks to develop a new testing methodology for a type of CNNs called Grasp Quality Convolutional Neural Networks (GQCNNs). Our goal is to find 
+                    perturbed 3D objects for which the GQCNN model incorrectly predicts the feasibility of a particular grasp. 
+                </p>
+            </div>
+            <div>
+                <h3>MELT: Mining Effective Lightweight Transformations from Pull Requests</h3>
+                <p>I started working on this as an REU project at REUSE at CMU in 2022 advised by Professor Claire Le Goues, and continued working on the project until publication.</p>
+                <p><strong>Abstract:</strong>Software developers often struggle to update APIs, leading to manual, time-consuming, and error-prone processes. We introduce Melt, 
+                    a new approach that generates lightweight API migration rules directly from pull requests in popular library repositories. Our key insight is that pull requests 
+                    merged into open-source libraries are a rich source of information sufficient to mine API migration rules. By leveraging code examples mined from the library 
+                    source and automatically generated code examples based on the pull requests, we infer transformation rules in Comby, a language for structural code search and 
+                    replace. Since inferred rules from single code examples may be too specific, we propose a generalization procedure to make the rules more applicable to client 
+                    projects. Melt rules are syntax-driven, interpretable, and easily adaptable. Moreover, unlike previous work, our approach enables rule inference to seamlessly 
+                    integrate into the library workflow, removing the need to wait for client code migrations. We evaluated Melt on pull requests from four popular libraries, 
+                    successfully mining 461 migration rules from code examples in pull requests and 114 rules from auto-generated code examples. Our generalization procedure 
+                    increases the number of matches for mined rules by 9×. We applied these rules to client projects and ran their tests, which led to an overall decrease in the 
+                    number of warnings and fixing some test cases demonstrating MELT's effectiveness in real-world scenarios.</p>
+                <p><a href="https://doi.ieeecomputersociety.org/10.1109/ASE56229.2023.00117" target="_blank">Read the paper!</a></p>
+            </div>
+           
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <a href="mailto:mitchelh@dickinson.edu"><img src="pictures/2674096_object_email_web_essential_icon.svg.png" alt="Email" class="icon">Email</a>
+            <a href="https://www.linkedin.com/in/hailie-mitchell" target="_blank"><img src="pictures/Linkedin_(CoreUI_Icons_v1.0.0).svg.png" alt="LinkedIn" class="icon">LinkedIn</a>
+            <a href="https://github.com/hailie-mitchell" target="_blank"><img src="pictures/Github-circle_(CoreUI_Icons_v1.0.0).svg.png" alt="GitHub" class="icon">GitHub</a>
+        </section>
+    </div>
+</body>
+</html>
